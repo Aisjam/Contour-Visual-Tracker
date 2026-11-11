@@ -1,0 +1,11 @@
+[
+  {
+    "version": "Development",
+    "date": "",
+    "title": "Public release pending",
+    "notes": [
+      "The public version history will begin when the first build is ready.",
+      "Published builds and downloads will appear under GitHub Releases."
+    ]
+  }
+]

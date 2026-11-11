@@ -1,0 +1,16 @@
+CONTOUR – VISUAL TRACKER / TEXT-ONLY EXPORT
+
+Every project file has a .txt extension to help transfer it on systems that restrict code-containing downloads.
+
+After moving files into your GitHub repository, rename as follows:
+
+index.html.txt -> index.html
+style.css.txt -> style.css
+script.js.txt -> script.js
+versions.json.txt -> versions.json
+README.md.txt -> README.md
+CHANGELOG.md.txt -> CHANGELOG.md
+
+For GitHub Pages, optionally add an empty file named .nojekyll (it was excluded from this text-only archive).
+
+IMPORTANT: Renaming files is necessary before GitHub Pages can use them. This text-only ZIP may still be blocked if your workplace policy blocks all ZIP downloads. If so, use the individual TXT download links.
