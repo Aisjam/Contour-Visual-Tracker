@@ -1,11 +1,10 @@
 [
   {
     "version": "Development",
-    "date": "",
     "title": "Public release pending",
     "notes": [
-      "The public version history will begin when the first build is ready.",
-      "Published builds and downloads will appear under GitHub Releases."
+      "Contour is in development. Published builds and release notes will appear when available.",
+      "Screenshots and instrument panels on this website are development captures using demonstration data."
     ]
   }
 ]

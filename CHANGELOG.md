@@ -1,20 +1,9 @@
-# Contour – Visual Tracker: Version History
+# Contour release notes
 
-All public software versions will be recorded here, newest first. Add an entry to `versions.json` as well to show it on the homepage.
+## Development — public release pending
 
-Format: `## [vX.Y.Z] – YYYY-MM-DD` followed by Added, Changed, Fixed, and Known issues as appropriate. Only describe features included in that build.
+Contour is in development. Published builds and version notes will be added here when available.
 
-## Unreleased
+The website shows development captures and synth panel renders using demonstration data. These are not announcements of a public release.
 
-- Public download not yet available.
-- First published release notes will be added here.
-
-<!-- Example for a real release (remove placeholder and replace with verified changes):
-## [v0.1.0] – YYYY-MM-DD
-### Added
-- ...
-### Fixed
-- ...
-### Known issues
-- ...
--->
+Builds, when published: https://github.com/Aisjam/Contour-Visual-Tracker/releases
