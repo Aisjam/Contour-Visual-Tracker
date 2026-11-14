@@ -1,10 +1,13 @@
 [
   {
-    "version": "Development",
-    "title": "Public release pending",
+    "version": "v0.0.1-alpha",
+    "date": "2026-11-14",
+    "title": "First alpha — proof of concept",
     "notes": [
-      "Contour is in development. Published builds and release notes will appear when available.",
-      "Screenshots and instrument panels on this website are development captures using demonstration data."
+      "First public experimental build of Contour – Visual Tracker.",
+      "Exploring horizontal tracking, synthesis and sampling, generative visuals, customisation and the CONT sharing concept; not every system is complete or available.",
+      "Expect bugs and audio or performance issues. Song files may change before beta and may not be backward-compatible.",
+      "Download the alpha build and report problems through GitHub Releases and Issues."
     ]
   }
 ]
