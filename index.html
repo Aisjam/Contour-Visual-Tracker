@@ -75,6 +75,12 @@
 .timeline .milestone h3{margin:12px 0 8px}
 .timeline .milestone p{margin:0;color:var(--sub);font-size:13px}
 @media(max-width:790px){.timeline{display:grid;grid-template-columns:minmax(0,1fr);row-gap:20px;padding:10px 0 15px 31px}.timeline::before{left:8px;transform:none}.timeline .milestone:nth-child(n){grid-column:1}.timeline .milestone:nth-child(n)::before{left:-31px;right:auto}.timeline .milestone:nth-child(n)::after{left:-24px;right:auto;width:23px}}
+
+/* Give each milestone its own row so the cards alternate down the centre line. */
+.timeline .milestone:nth-child(1){grid-row:1}
+.timeline .milestone:nth-child(2){grid-row:2}
+.timeline .milestone:nth-child(3){grid-row:3}
+.timeline .milestone:nth-child(4){grid-row:4}
 </style>
 <script>try{const t=localStorage.getItem('contour-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t;}catch(e){}</script>
 <style>
