@@ -1,5 +1,17 @@
 [
   {
+    "version": "v0.0.2-alpha",
+    "date": "2026-11-16",
+    "title": "The Syntax ’26 Performance Pass",
+    "notes": [
+      "Profiler-led performance cleanup across sample playback, modulation, filters, synths and master processing.",
+      "New DUEL filter for sample instruments; FRAY panel artwork, DAC waveform and Ghost indicators.",
+      "Revised FRACTURE factory filter behaviour; existing patches retain their previous filter behaviour.",
+      "Separate Windows, H700 and factory library downloads. Back up your data folder before updating.",
+      "Alpha limitations remain: performance varies, H700 acceptance testing is pending, and older save-staging errors are unresolved."
+    ]
+  },
+  {
     "version": "v0.0.1-alpha",
     "date": "2026-11-14",
     "title": "First alpha — proof of concept",
