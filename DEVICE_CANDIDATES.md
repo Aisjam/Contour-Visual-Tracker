@@ -58,7 +58,7 @@ GitHub Markdown does not reliably support cell backgrounds. The colour-coded bad
 
 | Name | Manufacturer link | Likelihood | Development | Notes |
 |---|---|:---:|---|---|
-| **Brick Pro** | [Official TrimUI Store](https://www.trimuistore.com/products/trimui-brick-pro-handheld-game-console?variant=48810422894848) | ★☆★★★ **(4/5)** | ![Planned](https://img.shields.io/badge/Planned-3269A8?style=flat-square) | 3.95-inch 1024×768, dual Hall sticks, full front/shoulder buttons, built-in **mono microphone**; strong candidate for live sample recording/audio input. Verify SDL3 capture and microphone access on TrimUI Linux, and test latency. |
+| **Brick Pro** | [Official TrimUI Store](https://www.trimuistore.com/products/trimui-brick-pro-handheld-game-console?variant=48810422894848) | ★★★★☆ **(4/5)** | ![Planned](https://img.shields.io/badge/Planned-3269A8?style=flat-square) | 3.95-inch 1024×768, dual Hall sticks, full front/shoulder buttons, built-in **mono microphone**; strong candidate for live sample recording/audio input. Verify SDL3 capture and microphone access on TrimUI Linux, and test latency. |
 
 **Audio clarification:** The manufacturer advertises a *built-in mono microphone* and a 3.5 mm **headphone output**. Do **not** assume the 3.5 mm socket is an analogue line-in or microphone input; that requires separate hardware verification. The potential for recording directly into Contour is why this is Planned.
 
@@ -70,7 +70,7 @@ GitHub Markdown does not reliably support cell backgrounds. The colour-coded bad
 
 | Name | Manufacturer link | Likelihood | Development | Notes |
 |---|---|:---:|---|---|
-| **RG DS** | [Official Anbernic listing](https://anbernic.com/en-au/products/rgds) | ★☆★★★ **(4/5)** | ![Planned](https://img.shields.io/badge/Planned-3269A8?style=flat-square) | Clamshell with two 4-inch 640×480 multitouch screens, capacitive stylus, dual sticks, Android 14 / Linux 64-bit. Existing Contour mouse/touch support is a useful foundation, but dual-screen window routing, separate views and platform build still need implementation. |
+| **RG DS** | [Official Anbernic listing](https://anbernic.com/en-au/products/rgds) | ★★★★☆ **(4/5)** | ![Planned](https://img.shields.io/badge/Planned-3269A8?style=flat-square) | Clamshell with two 4-inch 640×480 multitouch screens, capacitive stylus, dual sticks, Android 14 / Linux 64-bit. Existing Contour mouse/touch support is a useful foundation, but dual-screen window routing, separate views and platform build still need implementation. |
 
 **Dual-screen concept:** Song/Chain/Roll or visualiser on one display; instrument editing, pattern controls, mixer, keyboard or touch macros on the other. SDL display enumeration, touch coordinates, input focus and application-window placement must be tested on actual hardware.
 
