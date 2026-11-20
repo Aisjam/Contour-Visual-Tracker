@@ -37,8 +37,8 @@ GitHub Markdown does not reliably support cell backgrounds. The colour-coded bad
 | Name | Manufacturer link | Likelihood | Development | Notes |
 |---|---|:---:|---|---|
 | **RG35XX Pro** | [Official listing](https://anbernic.com/en-au/products/rg35xxpro) | ★★★★★ | ![Active](https://img.shields.io/badge/Active-237A57?style=flat-square) | Vertical, 3.5-inch 640×480, dual sticks; primary H700 target. |
-| **RG35XX H** | [Official listing](https://win.anbernic.com/product/364.html) | ★★★★★ | ![Active](https://img.shields.io/badge/Active-237A57?style=flat-square) | Horizontal 3.5-inch 640×480, dual sticks; control layout reference. |
-| **RG34XX SP** | [Official listing](https://anbernic.com/en-au/products/rg34xxsp) | ★★★☆☆ | ![Active](https://img.shields.io/badge/Active-237A57?style=flat-square) | Clamshell 720×480; stickless mapping needed. |
+| **RG34XX SP** | [Official listing](https://anbernic.com/en-au/products/rg34xxsp) | ★★★★★ | ![Active](https://img.shields.io/badge/Active-237A57?style=flat-square) | Clamshell 720×480;dual sticks; Secondary H700 target. |
+| **RG35XX H** | [Official listing](https://win.anbernic.com/product/364.html) | ★★★★★ | ![Active](https://img.shields.io/badge/Active-237A57?style=flat-square) | Horizontal 3.5-inch 640×480, dual sticks; Horizontal UX and UI Testing. |
 | **RG40XX H** | [Official listing](https://anbernic.com/en-au/products/rg40xx-h) | ★★★★★ | ![Radar](https://img.shields.io/badge/Radar-946000?style=flat-square) | 4-inch 640×480, dual sticks; strong larger-screen option. |
 | **RG CubeXX** | [Official listing](https://anbernic.com/en-au/products/rg-cubexx) | ★★★★★ | ![Radar](https://img.shields.io/badge/Radar-946000?style=flat-square) | Dual sticks, square 720×720; visual layout tests required. |
 | **RG40XX V** | [Official listing](https://anbernic.com/en-au/products/rg-40xxv) | ★★★☆☆ | ![Radar](https://img.shields.io/badge/Radar-946000?style=flat-square) | 4-inch 640×480, single stick; alternate macro mapping. |
