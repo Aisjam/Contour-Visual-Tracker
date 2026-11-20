@@ -1,71 +1,105 @@
-# Contour – Device Candidates
+# Contour – Device & Deployment Candidates
 
 > **Compatibility watchlist · Updated 21 November 2026**  
-> This is a planning document, **not** a list of confirmed working devices. Actual support depends on firmware, audio, SDL3, display, input mapping and device testing.
+> Prospective hardware and platform targets; this is **not a verified compatibility list**. Manufacturer listings are linked directly wherever available.
 
-## Rating system
+## Five-point candidate rubric (handhelds)
 
-The five stars describe **five cumulative suitability checkpoints**, not a review score. A device earns a star for each applicable checkpoint, in order:
+A star is awarded for each **independent** criterion below; a new chipset can therefore score 4/5 despite having no Contour CMake target yet. The score evaluates *suitability*, not demonstrated compatibility.
 
-| Star | Requirement |
+| Point | Criterion |
 |:--:|---|
-| ★☆☆☆☆ | **1 — Handheld:** it is a handheld gaming device. |
-| ★★☆☆☆ | **2 — CMake target:** its platform/chipset is represented by the current Contour CMake build targets (**Windows** and **Allwinner H700**). A shared H700 target does **not** guarantee a device-specific build works. |
-| ★★★☆☆ | **3 — Runtime plausible:** CPU, Linux/Windows environment and resources make running Contour plausible; **not a verified successful launch**. |
-| ★★★★☆ | **4 — Dual thumbsticks:** two physical analogue sticks for Contour's intended input/macro controls. |
-| ★★★★★ | **5 — Complete UI controls:** D-pad, face buttons, Start/Select/Menu equivalents, shoulder controls and two sticks offer a practical mapping for all core Contour interactions. Device-specific remapping may still be needed. |
+| ★ 1 | **Handheld** — a portable handheld gaming device. |
+| ★ 2 | **Current CMake family** — included in Contour's current Windows or Allwinner H700 build-target families; this alone does not guarantee device-specific compatibility. |
+| ★ 3 | **Could run Contour** — a plausible operating system, CPU and hardware for a future build; not a confirmed launch. |
+| ★ 4 | **Dual thumbsticks** — two analogue sticks for Contour's macro/joystick control layout. |
+| ★ 5 | **Complete user interface** — sufficient physical controls and/or alternative touch/mouse input to map Contour's interaction system, potentially requiring custom layouts. |
 
-**Important:** a device without two sticks is capped at **3/5** under this *cumulative* rubric, even if a stickless control scheme may become viable. Stars indicate candidate suitability, **not** the current test result.
+**A 5/5 score does not mean 'tested'.** Details like screen size, kernel, SDL3, audio routing, input devices, graphics support and firmware still need validation.
 
-### Development status
+### Development status (Contour light-mode-inspired badges)
 
-| Status | Meaning | Light-theme indicator |
+| Status | Meaning | Label |
 |---|---|---|
-| **Active** | Owned and currently used for Contour development/testing | ![Active](https://img.shields.io/badge/Active-DAF4E8?style=flat-square&labelColor=DAF4E8&color=DAF4E8) |
-| **Planned** | Intended to purchase for hands-on testing soon | ![Planned](https://img.shields.io/badge/Planned-DDEBFF?style=flat-square&labelColor=DDEBFF&color=DDEBFF) |
-| **Radar** | Identified as a candidate; no purchase or test scheduled | ![Radar](https://img.shields.io/badge/Radar-FFF0CC?style=flat-square&labelColor=FFF0CC&color=FFF0CC) |
-| **Nope** | Not pursuing this device | ![Nope](https://img.shields.io/badge/Nope-F8DDDF?style=flat-square&labelColor=F8DDDF&color=F8DDDF) |
+| **Active** | Owned and currently used for Contour development/testing | ![Active](https://img.shields.io/badge/Active-237A57?style=flat-square) |
+| **Planned** | Intent to buy/test soon, or explicitly scheduled future deployment | ![Planned](https://img.shields.io/badge/Planned-3269A8?style=flat-square) |
+| **Radar** | Recognised as a potential target but not scheduled | ![Radar](https://img.shields.io/badge/Radar-946000?style=flat-square) |
+| **Nope** | Not pursuing at present | ![Nope](https://img.shields.io/badge/Nope-A13D4B?style=flat-square) |
 
-Palette above uses **provisional Contour-light-inspired** pastel backgrounds (mint, blue, amber and rose); replace hex values with the actual light-theme semantic tokens if those are standardised elsewhere. GitHub Markdown tables do not support reliably coloured cells, so badges provide visual status cues.
+GitHub Markdown does not reliably support cell backgrounds. The colour-coded badge approximations use high-contrast mint/blue/amber/rose semantic status colours for legibility in light mode. They are not claimed to be the exact Contour theme tokens.
 
 ## Chipset: Allwinner H700
 
-**Existing CMake platform family:** H700 / Linux AArch64 (alongside Windows). The presence of the target alone does not certify every device. Device-level differences include display resolution, joystick count, button mapping, audio and firmware.
+**CMake family:** H700/Linux AArch64 (current). Device-specific OS, display and controls may still vary.
 
 ### Brand: Anbernic
 
-| Candidate | Device link | Likelihood | Current development | Key considerations |
+| Name | Manufacturer link | Likelihood | Development | Notes |
 |---|---|:---:|---|---|
-| **RG35XX Pro** | [Device information](https://www.retrodock.com/handhelds/anbernic/rg35xx-pro/) | ★★★★★ | ![Active](https://img.shields.io/badge/Active-DAF4E8?style=flat-square&labelColor=DAF4E8&color=DAF4E8) | Vertical, 3.5″ 640×480, dual sticks; primary target. |
-| **RG34XX SP** | [Device information](https://www.handhelds.wiki/Category:Allwinner_H700) | ★★★★★ | ![Active](https://img.shields.io/badge/Active-DAF4E8?style=flat-square&labelColor=DAF4E8&color=DAF4E8) | Clamshell, 3:2 screen, 3.5″ 640×480, dual sticks; Secondary target.  |
-| **RG35XX H** | [Device information](https://retrogamecorps.com/2024/06/07/anbernic-rg35xx-family-starter-guide/) | ★★★★★ | ![Active](https://img.shields.io/badge/Active-DAF4E8?style=flat-square&labelColor=DAF4E8&color=DAF4E8) | Horizontal, 3.5″ 640×480, dual sticks; Horizontal UX layout testing. |
-| **RG40XX H** | [Device information](https://www.retrodock.com/handhelds/anbernic/rg40xx-h/) | ★★★★★ | ![Radar](https://img.shields.io/badge/Radar-FFF0CC?style=flat-square&labelColor=FFF0CC&color=FFF0CC) | Horizontal, 4″ 640×480, dual sticks; strong larger-screen candidate. |
-| **RG CubeXX** | [Device information](https://www.retrodock.com/handhelds/anbernic/rg-cubexx/) | ★★★★★ | ![Radar](https://img.shields.io/badge/Radar-FFF0CC?style=flat-square&labelColor=FFF0CC&color=FFF0CC) | Dual sticks, 720×720 square screen; needs explicit layout/scaling test. |
-| **RG40XX V** | [Device information](https://www.retrodock.com/handhelds/anbernic/rg40xx-v/) | ★★★☆☆ | ![Radar](https://img.shields.io/badge/Radar-FFF0CC?style=flat-square&labelColor=FFF0CC&color=FFF0CC) | Vertical, 4″ 640×480, **one** stick; evaluate reduced macro controls. |
-| **RG35XX Plus** | [Device information](https://retrogamecorps.com/2024/06/07/anbernic-rg35xx-family-starter-guide/) | ★★★☆☆ | ![Radar](https://img.shields.io/badge/Radar-FFF0CC?style=flat-square&labelColor=FFF0CC&color=FFF0CC) | Vertical 3.5″, no sticks; alternative input map needed. |
-| **RG35XX (2024)** | [Official product page](https://anbernic.com/en-gb/collections/handheld-game-console/products/rg35xx) | ★★★☆☆ | ![Radar](https://img.shields.io/badge/Radar-FFF0CC?style=flat-square&labelColor=FFF0CC&color=FFF0CC) | H700 revision **only**; no sticks or built-in Wi-Fi/Bluetooth. Not the original pre-2024 RG35XX. |
-| **RG35XX SP** | [Device information](https://retrogamecorps.com/2024/06/07/anbernic-rg35xx-family-starter-guide/) | ★★★☆☆ | ![Radar](https://img.shields.io/badge/Radar-FFF0CC?style=flat-square&labelColor=FFF0CC&color=FFF0CC) | 3.5″ clamshell, no sticks; test folding/suspend behaviour. |
-| **RG34XX** | [Device information](https://www.handhelds.wiki/Category:Allwinner_H700) | ★★★☆☆ | ![Radar](https://img.shields.io/badge/Radar-FFF0CC?style=flat-square&labelColor=FFF0CC&color=FFF0CC) | 3:2 screen, no dual sticks; alternate layout. |
-| **RG28XX** | [Device information](https://retrogamecorps.com/2024/06/07/anbernic-rg35xx-family-starter-guide/) | ★★★☆☆ | ![Radar](https://img.shields.io/badge/Radar-FFF0CC?style=flat-square&labelColor=FFF0CC&color=FFF0CC) | Tiny 2.8″ display, no sticks or built-in Wi-Fi/Bluetooth; UI readability and sharing limitations. |
+| **RG35XX Pro** | [Official listing](https://anbernic.com/en-au/products/rg35xxpro) | ★★★★★ | ![Active](https://img.shields.io/badge/Active-237A57?style=flat-square) | Vertical, 3.5-inch 640×480, dual sticks; primary H700 target. |
+| **RG35XX H** | [Official listing](https://win.anbernic.com/product/364.html) | ★★★★★ | ![Active](https://img.shields.io/badge/Active-237A57?style=flat-square) | Horizontal 3.5-inch 640×480, dual sticks; control layout reference. |
+| **RG34XX SP** | [Official listing](https://anbernic.com/en-au/products/rg34xxsp) | ★★★☆☆ | ![Active](https://img.shields.io/badge/Active-237A57?style=flat-square) | Clamshell 720×480; stickless mapping needed. |
+| **RG40XX H** | [Official listing](https://anbernic.com/en-au/products/rg40xx-h) | ★★★★★ | ![Radar](https://img.shields.io/badge/Radar-946000?style=flat-square) | 4-inch 640×480, dual sticks; strong larger-screen option. |
+| **RG CubeXX** | [Official listing](https://anbernic.com/en-au/products/rg-cubexx) | ★★★★★ | ![Radar](https://img.shields.io/badge/Radar-946000?style=flat-square) | Dual sticks, square 720×720; visual layout tests required. |
+| **RG40XX V** | [Official listing](https://anbernic.com/en-au/products/rg-40xxv) | ★★★☆☆ | ![Radar](https://img.shields.io/badge/Radar-946000?style=flat-square) | 4-inch 640×480, single stick; alternate macro mapping. |
+| **RG35XX Plus** | [Official listing](https://anbernic.com/en-au/products/rg35xx-plus) | ★★★☆☆ | ![Radar](https://img.shields.io/badge/Radar-946000?style=flat-square) | 3.5-inch 640×480, stickless. |
+| **RG35XX (2024)** | [Official listing](https://anbernic.com/en-au/products/rg35xx) | ★★★☆☆ | ![Radar](https://img.shields.io/badge/Radar-946000?style=flat-square) | Only H700 2024 revision; no sticks; not original model. |
+| **RG35XX SP** | [Official listing](https://anbernic.com/en-au/products/rg35xxsp) | ★★★☆☆ | ![Radar](https://img.shields.io/badge/Radar-946000?style=flat-square) | 3.5-inch clamshell; no sticks; test sleep handling. |
+| **RG34XX** | [Official listing](https://anbernic.com/en-au/products/rg34xx) | ★★★☆☆ | ![Radar](https://img.shields.io/badge/Radar-946000?style=flat-square) | 720×480; no dual sticks; alternate mapping. |
+| **RG28XX** | [Official listing](https://anbernic.com/en-au/products/rg28xx) | ★★★☆☆ | ![Radar](https://img.shields.io/badge/Radar-946000?style=flat-square) | 2.83-inch display; small UI, no sticks or built-in Wi-Fi/Bluetooth. |
 
-**Status verification:** The three Active entries reflect devices previously identified in Contour development/testing materials; ownership and *current* hands-on use should be reconfirmed before publicly asserting that all three are actively owned. No device is marked Planned or Nope without a stated purchase/rejection decision.
+**Active status check:** The three Active labels above retain prior project/watchlist classifications. Verify ownership and current hands-on testing before describing them publicly as personally owned or fully supported.
 
-## Next validation steps
+## Chipset: Allwinner A133P
 
-1. **Build:** check CMake/SDL3 target, deployable binary and firmware/OS support.
-2. **Boot:** launch without missing libraries and verify audio at 48 kHz, 512-frame buffers.
-3. **Inputs:** confirm D-pad, A/B/X/Y, Start/Select/Menu, L1/R1/L2/R2, stick axes and stick clicks where present.
-4. **UI:** test 640×480, 720×480 and 720×720 layouts; confirm overlays, text, macro controls and readable menus.
-5. **Connectivity:** validate wireless discovery, pairing and local transfer separately; do not assume all H700 models include wireless hardware.
-6. **Performance:** profile sampler+synth voices, effects, compositor and memory under realistic projects.
-7. **Record:** only call a device **Verified** after a documented launch and test, independent of the five-star suitability rating.
+**CMake family:** Not currently an explicit target; a new deployment configuration/toolchain will be needed.
 
-## Reference sources
+### Brand: TrimUI
 
-- [H700 model family – Handhelds Wiki](https://handhelds.wiki/Category:Allwinner_H700)
-- [Anbernic H700 platform and firmware list – KNULLI](https://github.com/knulli-cfw/knulli.org/blob/main/docs/devices/index.md)
-- [RG35XX family hardware guide – Retro Game Corps](https://retrogamecorps.com/2024/06/07/anbernic-rg35xx-family-starter-guide/)
-- [H700 platform specs – Batocera Wiki](https://wiki.batocera.org/choose_a_handheld)
-- [Contour project](https://github.com/Aisjam/Contour-Visual-Tracker)
+| Name | Manufacturer link | Likelihood | Development | Notes |
+|---|---|:---:|---|---|
+| **Brick Pro** | [Official TrimUI Store](https://www.trimuistore.com/products/trimui-brick-pro-handheld-game-console?variant=48810422894848) | ★☆★★★ **(4/5)** | ![Planned](https://img.shields.io/badge/Planned-3269A8?style=flat-square) | 3.95-inch 1024×768, dual Hall sticks, full front/shoulder buttons, built-in **mono microphone**; strong candidate for live sample recording/audio input. Verify SDL3 capture and microphone access on TrimUI Linux, and test latency. |
 
-> **Maintainer note:** Planned and Nope are intentionally defined but currently unused. Change a Radar row to Planned when a purchase is actually intended, or Nope when support is ruled out. For additional chipsets, add a new `## Chipset: ...` section and `### Brand: ...` subsections using the same table format.
+**Audio clarification:** The manufacturer advertises a *built-in mono microphone* and a 3.5 mm **headphone output**. Do **not** assume the 3.5 mm socket is an analogue line-in or microphone input; that requires separate hardware verification. The potential for recording directly into Contour is why this is Planned.
+
+## Chipset: Rockchip RK3568
+
+**CMake family:** Not currently an explicit target. Android/Linux packaging and dual-display handling require investigation.
+
+### Brand: Anbernic
+
+| Name | Manufacturer link | Likelihood | Development | Notes |
+|---|---|:---:|---|---|
+| **RG DS** | [Official Anbernic listing](https://anbernic.com/en-au/products/rgds) | ★☆★★★ **(4/5)** | ![Planned](https://img.shields.io/badge/Planned-3269A8?style=flat-square) | Clamshell with two 4-inch 640×480 multitouch screens, capacitive stylus, dual sticks, Android 14 / Linux 64-bit. Existing Contour mouse/touch support is a useful foundation, but dual-screen window routing, separate views and platform build still need implementation. |
+
+**Dual-screen concept:** Song/Chain/Roll or visualiser on one display; instrument editing, pattern controls, mixer, keyboard or touch macros on the other. SDL display enumeration, touch coordinates, input focus and application-window placement must be tested on actual hardware.
+
+## Other deployment targets (not specific to chipset or brand)
+
+Desktop operating systems are listed separately: the **handheld five-star rubric is not applicable**. Status means *Contour deployment development* rather than ownership of a physical handheld.
+
+| Target | Official platform link | Current build target | Development | Plan / blocker |
+|---|---|:---:|---|---|
+| **Windows** | [Microsoft Windows](https://www.microsoft.com/windows) | Yes | ![Active](https://img.shields.io/badge/Active-237A57?style=flat-square) | Existing desktop development/build target; continue testing mouse, keyboard, controller and audio. |
+| **Linux desktop** | [Linux kernel](https://www.kernel.org/) | Not yet separate desktop target | ![Planned](https://img.shields.io/badge/Planned-3269A8?style=flat-square) | Expand deployment targets when Contour reaches beta or is close to beta. Plan x86-64 desktop build, SDL3/audio, packaging and distro testing. H700 Linux does **not** by itself imply a desktop Linux build. |
+| **macOS** | [Apple macOS](https://www.apple.com/macos/) | No | ![Radar](https://img.shields.io/badge/Radar-946000?style=flat-square) | Mac hardware purchase required before local build, signing, packaging and hands-on testing. Review Apple Silicon support and SDL3 dependencies. |
+
+### Scope for future entries
+
+Add further `## Chipset: ...` sections and `### Brand: ...` tables for other dedicated handheld devices. Put desktop operating systems, mobile, tablets, browser/WebAssembly or other non-handheld deployment targets in **Other deployment targets**, with their own feasibility notes rather than an artificial handheld star score.
+
+## Validation checklist
+
+1. **Build/toolchain** — correct CPU architecture, compiler, CMake preset, SDL3 and system libraries.
+2. **Launch/audio** — 48 kHz output at default 512-frame buffer; profile synth voices, mixer, effects and memory.
+3. **Capture** — for microphone devices, validate real audio capture endpoints, permissions, latency, monitor routing and sample import.
+4. **Input** — D-pad, ABXY, Start/Select/Menu, shoulders, stick axes/clicks, keyboard, mouse and touch as available.
+5. **Display** — test 640×480, 720×480, 720×720, 1024×768 and dual-screen layouts; check text scaling and overlays.
+6. **Connectivity** — validate Bluetooth/Wi-Fi availability and Contour file-sharing transport per device.
+7. **Record test result separately** — only label a platform/device **Verified** after a documented, reproducible successful launch.
+
+## Manufacturer references
+
+- [Anbernic official catalogue](https://anbernic.com/)
+- [TrimUI official Brick Pro listing](https://www.trimuistore.com/products/trimui-brick-pro-handheld-game-console)
+- [Contour source repository](https://github.com/Aisjam/Contour-Visual-Tracker)
