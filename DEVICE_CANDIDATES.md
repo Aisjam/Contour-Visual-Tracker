@@ -88,6 +88,16 @@ Desktop operating systems are listed separately: the **handheld five-star rubric
 
 Add further `## Chipset: ...` sections and `### Brand: ...` tables for other dedicated handheld devices. Put desktop operating systems, mobile, tablets, browser/WebAssembly or other non-handheld deployment targets in **Other deployment targets**, with their own feasibility notes rather than an artificial handheld star score.
 
+## Got a device I should know about?
+
+Know a handheld, console, or other device that could be a good fit for **Contour** but isn't listed here? I'd love to hear about it!
+
+[**Suggest a device by opening a GitHub issue**](https://github.com/Aisjam/Contour-Visual-Tracker/issues/new?title=Device%20suggestion%3A%20&body=Device%20name%3A%20%0AManufacturer%2Fproduct%20link%3A%20%0AChipset%20and%20operating%20system%20(if%20known)%3A%20%0AWhy%20it%20would%20be%20a%20good%20fit%20for%20Contour%3A%20)
+
+Please include the **device name**, a **manufacturer or product link**, and what makes it interesting for Contour (for example, dual sticks, touchscreen, audio input, or Linux support). If you know the chipset or operating system, that's useful too.
+
+I'll take a look and consider adding it to this candidate list. **A listing is not a promise of a future port or compatibility.**
+
 ## Validation checklist
 
 1. **Build/toolchain** — correct CPU architecture, compiler, CMake preset, SDL3 and system libraries.
